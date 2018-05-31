@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#f7f719</color>
+
+
+    <color name="dashboard">#ab1903</color>
+
+    <color name="income">#8b0af4</color>
+
+    <color name="expense">#731a81</color>
+
+    <color name="btnsavecolor">#FFDA5E0C</color>
+
+
+    <color name="ammonu_income_color">#4b1197</color>
+
+    <color name="expense_das_text">#ab1903</color>
+
+    <color name="income_Dash_text">#1fc90f</color>
+
+</resources>

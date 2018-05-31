@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/dashboard"
+        android:title="DashBoard"
+        android:icon="@drawable/dashboard"/>
+
+    <item android:id="@+id/add"
+        android:title="Income"
+        android:icon="@drawable/add"/>
+
+    <item android:id="@+id/remove"
+        android:title="Expense"
+        android:icon="@drawable/remove"/>
+
+    <item android:id="@+id/logout"
+        android:title="Log Out"
+        android:icon="@drawable/logout"/>
+
+</menu>

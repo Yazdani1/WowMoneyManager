@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "650452570472",
+    "firebase_url": "https://wowmoneymanager.firebaseio.com",
+    "project_id": "wowmoneymanager",
+    "storage_bucket": "wowmoneymanager.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:650452570472:android:557c6587c83faae6",
+        "android_client_info": {
+          "package_name": "yazdaniscodelab.wowmoneymanager"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "650452570472-fokv629c9d37utq5c2p8th41d583n1jk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "yazdaniscodelab.wowmoneymanager",
+            "certificate_hash": "8bbad294121d3334a8308fc20bd2791ea06aa9c3"
+          }
+        },
+        {
+          "client_id": "650452570472-4prv2tpr2v1d3kdi41rdd87ueituv2lf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZ0pTmNo9kZ5Ivr6-w62qzSZ0GcfSbbds"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "650452570472-4prv2tpr2v1d3kdi41rdd87ueituv2lf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
