@@ -518,7 +518,7 @@ public class DashBoardFragment extends Fragment {
                         Data.class,
                         R.layout.income_recycler_data,
                         DashBoardFragment.MyViewHolder.class,
-                        maindatabase
+                        incomeDatabase
                 ) {
             @Override
             protected void populateViewHolder(MyViewHolder viewHolder, Data model, int position) {
@@ -532,8 +532,6 @@ public class DashBoardFragment extends Fragment {
         };
         recyclerView.setAdapter(adapter);
     }
-
-
 
     public static  class MyViewHolder extends RecyclerView.ViewHolder{
 

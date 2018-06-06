@@ -1,5 +1,7 @@
 package yazdaniscodelab.wowmoneymanager.Model;
 
+import android.widget.EditText;
+
 /**
  * Created by Yazdani on 5/19/2018.
  */
