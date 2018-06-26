@@ -107,6 +107,7 @@ public class DashBoardFragment extends Fragment {
     //Recycler view..
 
     private RecyclerView recyclerView;
+    private RecyclerView expense_Recycler;
 
 
 
@@ -176,12 +177,19 @@ public class DashBoardFragment extends Fragment {
         //Recycler view..
 
         recyclerView=myview.findViewById(R.id.recyclerdata);
+        expense_Recycler=myview.findViewById(R.id.recycler_expense);
 
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false);
         layoutManager.setReverseLayout(true);
         layoutManager.setStackFromEnd(true);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(layoutManager);
+
+        LinearLayoutManager expenseLayoutmanager=new LinearLayoutManager(getActivity(),LinearLayoutManager.HORIZONTAL,false);
+        expenseLayoutmanager.setReverseLayout(true);
+        expenseLayoutmanager.setStackFromEnd(true);
+        expense_Recycler.setHasFixedSize(true);
+        expense_Recycler.setLayoutManager(expenseLayoutmanager );
 
 
 
@@ -516,7 +524,7 @@ public class DashBoardFragment extends Fragment {
         FirebaseRecyclerAdapter<Data,MyViewHolder>adapter=new FirebaseRecyclerAdapter<Data, MyViewHolder>
                 (
                         Data.class,
-                        R.layout.income_recycler_data,
+                        R.layout.dashbor_income_data_item,
                         DashBoardFragment.MyViewHolder.class,
                         incomeDatabase
                 ) {
@@ -525,12 +533,32 @@ public class DashBoardFragment extends Fragment {
 
                 viewHolder.setDate(model.getDate());
                 viewHolder.setType(model.getType());
-                viewHolder.setNote(model.getNote());
                 viewHolder.setAmmount(model.getAmmount());
 
             }
         };
         recyclerView.setAdapter(adapter);
+
+        FirebaseRecyclerAdapter<Data,ExpenseViewHolder>expenseAdapter=new FirebaseRecyclerAdapter<Data, ExpenseViewHolder>
+                (
+                        Data.class,
+                        R.layout.dashbor_income_data_item,
+                        DashBoardFragment.ExpenseViewHolder.class,
+                        expenseDatabase
+
+                ) {
+            @Override
+            protected void populateViewHolder(ExpenseViewHolder viewHolder, Data model, int position) {
+
+                viewHolder.setType(model.getType());
+                viewHolder.setAmmount(model.getAmmount());
+                viewHolder.setDate(model.getDate());
+
+            }
+        };
+
+        expense_Recycler.setAdapter(expenseAdapter);
+
     }
 
     public static  class MyViewHolder extends RecyclerView.ViewHolder{
@@ -544,14 +572,14 @@ public class DashBoardFragment extends Fragment {
 
         public void setType(String type){
 
-            TextView mtype=myview.findViewById(R.id.type_data);
+            TextView mtype=myview.findViewById(R.id.type_txt);
             mtype.setText(type);
 
         }
 
         public void setAmmount(int ammount){
 
-            TextView mAmmount=myview.findViewById(R.id.amount_data);
+            TextView mAmmount=myview.findViewById(R.id.ammount_txt);
 
             String myammount=String.valueOf(ammount);
 
@@ -559,26 +587,54 @@ public class DashBoardFragment extends Fragment {
 
         }
 
-        public void setNote(String note){
 
-            TextView mNote=myview.findViewById(R.id.note_data);
-            mNote.setText(note);
-
-        }
 
         public void setDate(String date){
 
-            TextView mDate=myview.findViewById(R.id.date_data);
+            TextView mDate=myview.findViewById(R.id.date_txt);
             mDate.setText(date);
 
         }
 
     }
 
+    public static class ExpenseViewHolder extends RecyclerView.ViewHolder{
+
+        View mmview;
+
+        public ExpenseViewHolder(View itemView) {
+            super(itemView);
+            mmview=itemView;
+        }
+
+        public void setType(String type){
+
+            TextView mtype=mmview.findViewById(R.id.type_txt);
+            mtype.setText(type);
+
+        }
+
+        public void setAmmount(int ammount){
+
+            TextView mAmmount=mmview.findViewById(R.id.ammount_txt);
+
+            String myammount=String.valueOf(ammount);
+
+            mAmmount.setText(myammount);
+
+        }
 
 
 
+        public void setDate(String date){
 
+            TextView mDate=mmview.findViewById(R.id.date_txt);
+            mDate.setText(date);
+
+        }
+
+
+    }
 
 
 }

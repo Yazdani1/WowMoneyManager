@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="4dp"
+    android:elevation="5dp"
+    android:layout_margin="5dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="140dp"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="140dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="5000000.00"
+            android:textColor="@color/ammonu_income_color"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:gravity="center"
+            android:id="@+id/ammount_txt"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Type"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:maxLines="1"
+            android:id="@+id/type_txt"
+            />
+
+        <TextView
+            android:id="@+id/date_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAppearance="?android:textAppearanceSmall"
+            android:textColor="@color/ammonu_income_color"
+            android:layout_marginTop="15dp"
+            android:text="5000000.00" />
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
